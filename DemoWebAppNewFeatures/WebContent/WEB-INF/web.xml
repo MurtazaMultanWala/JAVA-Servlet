@@ -11,6 +11,8 @@
 		<url-pattern>/add</url-pattern>
 	</servlet-mapping>
 	
+	
+	
 	<servlet>
 		<servlet-name>squareServletConfig</servlet-name>
 		<servlet-class>com.murtaza.SquareServlet</servlet-class>
@@ -20,5 +22,32 @@
 		<servlet-name>squareServletConfig</servlet-name>
 		<url-pattern>/sq</url-pattern>
 	</servlet-mapping>
-
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>ServiceConfigAndContextDemo</servlet-name>
+		<servlet-class>com.murtaza.MyServlet</servlet-class>
+		
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>Murtaza Multan</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ServiceConfigAndContextDemo</servlet-name>
+		<url-pattern>/sc_tx_g</url-pattern>
+	</servlet-mapping>
+	
+	<context-param>
+		<param-name>name</param-name>
+		<param-value>Murtaza</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>Phone</param-name>
+		<param-value>Samsung</param-value>
+	</context-param>
 </web-app>
