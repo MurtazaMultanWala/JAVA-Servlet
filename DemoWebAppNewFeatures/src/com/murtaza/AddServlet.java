@@ -6,12 +6,20 @@ import java.net.HttpCookie;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/*
+	Writing XML code to configure servlet is not suitable for everyone. So writing XML code to configure all the servlets
+	and mappings with their URL, it is better to use annotation form in which we just needed to write the URI and all
+	configuration is done by itself. That Cool !! isn't it. :).
+*/
+
+@WebServlet("/add")  
 public class AddServlet extends HttpServlet{
 
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
