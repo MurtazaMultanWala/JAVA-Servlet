@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
  <%@ page import="java.sql.Statement, java.util.Random, java.util.ArrayList"  %>
  
- <%@ include file="printJSP.jsp" %>
+ <%-- <%@ include file="printJSP.jsp" %> --%>
 <!DOCTYPE html>
 <html>
 <head>

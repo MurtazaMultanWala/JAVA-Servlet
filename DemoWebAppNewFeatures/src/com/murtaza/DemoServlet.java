@@ -18,12 +18,13 @@ public class DemoServlet extends HttpServlet{
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		
-//		String name = "Murtaza";
+		String name = "Murtaza";
 		
 		List<Students> studs = Arrays.asList(
 				new Students("Murtaza", 1),				
 				new Students("Mustafa", 2));
 		
+		req.setAttribute("label", name);
 		req.setAttribute("StudentList", studs);
 		
 		RequestDispatcher rd = req.getRequestDispatcher("displayJSP.jsp");
