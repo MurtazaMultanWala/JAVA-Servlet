@@ -26,5 +26,9 @@
 	%>
 	
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/gQLQ0t9B5yk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<form action="logout" method="post">
+		<input type="submit" value="logout"> 
+	</form>
 </body>
 </html>

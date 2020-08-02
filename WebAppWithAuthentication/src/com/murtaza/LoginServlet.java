@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.murtaza.dao.LoginDAO;
+
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet{
 	
@@ -16,7 +18,9 @@ public class LoginServlet extends HttpServlet{
 		String username = req.getParameter("username");
 		String password = req.getParameter("pass");
 		
-		if(username.equals("Murtaza") && password.equals("murtaza")) {
+		LoginDAO loginDAO = new LoginDAO();
+		
+		if(loginDAO.checkCredentials(username, password)) {
 //			creating session to secure pages needed authentication for access
 			HttpSession session = req.getSession();
 			session.setAttribute("username", username);
