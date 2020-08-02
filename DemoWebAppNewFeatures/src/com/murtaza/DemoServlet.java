@@ -1,6 +1,8 @@
 package com.murtaza;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,9 +18,13 @@ public class DemoServlet extends HttpServlet{
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		
-		String name = "Murtaza";
+//		String name = "Murtaza";
 		
-		req.setAttribute("label", name);
+		List<Students> studs = Arrays.asList(
+				new Students("Murtaza", 1),				
+				new Students("Mustafa", 2));
+		
+		req.setAttribute("StudentList", studs);
 		
 		RequestDispatcher rd = req.getRequestDispatcher("displayJSP.jsp");
 		rd.forward(req, res);
