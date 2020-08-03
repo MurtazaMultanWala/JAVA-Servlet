@@ -1,0 +1,33 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  
+  <servlet>
+  	<servlet-name>GetAllienController</servlet-name>
+  	<display-name>GetAllienController</display-name>
+  	<description></description>
+  	<servlet-class>com.murtaza.web.GetAllienController</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>AddNewAllienController</servlet-name>
+  	<display-name>AddNewAllienController</display-name>
+  	<description></description>
+  	<servlet-class>com.murtaza.web.AddNewAllienController</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>GetAllienController</servlet-name>
+  	<url-pattern>/getAllien</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>AddNewAllienController</servlet-name>
+  	<url-pattern>/addAllien</url-pattern>
+  </servlet-mapping>
+  
+ 
+</web-app>
